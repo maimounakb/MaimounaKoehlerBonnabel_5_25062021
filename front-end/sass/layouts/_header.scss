@@ -1,0 +1,15 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}

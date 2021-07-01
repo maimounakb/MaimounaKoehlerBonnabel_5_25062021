@@ -1,0 +1,24 @@
+#presentationProduits {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.produit {
+    margin: 0.5rem;
+    height: 10rem;
+    width: 45%;
+    border: black solid 0.1rem;
+    border-radius: 0.2rem;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__description {
+        height: 3rem;
+    }
+}

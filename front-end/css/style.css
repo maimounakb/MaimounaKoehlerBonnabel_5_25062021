@@ -1,7 +1,9 @@
+@charset "UTF-8";
 /**
  * TABLE DES MATIERES
  *
  * BASE
+ * Général...............Styles généraux (body, H, a, etc.)
  *
  * UNTILS
  *
@@ -12,5 +14,73 @@
  * PAGES
  *
  */
+/*---------------------------*\
+    #VARIABLES COULEURS
+    IDENTITE GRAPHIQUE
+\*---------------------------*/
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  margin: 0rem;
+}
+
+ul {
+  margin: 0rem;
+  padding: 0rem;
+  list-style: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.5rem;
+}
+
+#presentationProduits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.produit {
+  margin: 0.5rem;
+  height: 10rem;
+  width: 45%;
+  border: black solid 0.1rem;
+  border-radius: 0.2rem;
+}
+.produit a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.produit__description {
+  height: 3rem;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #9356dc;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */

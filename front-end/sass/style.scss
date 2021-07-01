@@ -2,6 +2,7 @@
  * TABLE DES MATIERES
  *
  * BASE
+ * Général...............Styles généraux (body, H, a, etc.)
  *
  * UNTILS
  *
@@ -12,3 +13,12 @@
  * PAGES
  *
  */
+
+
+@import "./untils/variables.scss";
+
+@import "./base/general.scss";
+@import "./components/articles.scss";
+
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
