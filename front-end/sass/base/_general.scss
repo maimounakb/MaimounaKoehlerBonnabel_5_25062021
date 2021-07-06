@@ -1,23 +1,51 @@
-body {
-  margin: 0px;
+/*---------------------------*\
+      #STYLES GENERAUX
+       BODY ET TITRES
+\*---------------------------*/
+html {
+  background-color: $color-tertiary;
+  height: 100%;
 }
 
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  margin: 1rem;
+}
+
+/*---------------------------*\
+      #STYLES DES LIENS
+\*---------------------------*/
 a {
   text-decoration: none;
   margin: 0rem;
+  color: black;
 }
 
+#header a, #footer a {
+  color: white;
+}
+
+/*---------------------------*\
+      #STYLES DES LISTES
+\*---------------------------*/
 ul {
   margin: 0rem;
   padding: 0rem;
   list-style: none;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-}
-
+/*--------------------*\
+      #CONTENEURS
+\*--------------------*/
 .container {
   max-width: 1200px;
   margin-right: auto;

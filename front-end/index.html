@@ -12,45 +12,56 @@
 
 <body>
     <header id="header">
-        <img class="logo" src="" alt="logo d'Onorico">
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="panier.html">Panier</a></li>
-            </ul>
-        </nav>
+        <div class="container header">
+            <img class="logo" src="" alt="logo d'Onorico">
+            <nav class="navbar navbar-header">
+                <ul>
+                    <li class="navbar-header__index"><a href="index.html">Accueil</a></li>
+                    <li class="navbar-header__panier"><a href="panier.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main id="main" class="container">
         <h1>Onorico</h1>
+        <h2>Adoptez vite votre ours !</h2>
 
         <section id="presentationProduits">
             <article class="produit">
                 <a>
                     <img class="produit__image produit_image--teddy1" src="" alt="...">
-                    <p class="produit__nom">Teddy_1</p>
-                    <p class="produit__prix">prix</p>
+                    <ul class="produit__description">
+                        <li><h3 class="">Teddy_1</h3></li>
+                        <li><p class="">prix</p></li>
+                    </ul>
                 </a>
             </article>
             <article class="produit">
                 <a>
                     <img class="produit__image produit_image--teddy2" src="" alt="...">
-                    <p class="produit__nom">Teddy_2</p>
-                    <p class="produit__prix">prix</p>
+                    <ul class="produit__description">
+                        <li><h3 class="">Teddy_2</h3></li>
+                        <li><p class="">prix</p></li>
+                    </ul>
                 </a>
             </article>
             <article class="produit">
                 <a>
                     <img class="produit__image produit_image--teddy3" src="" alt="...">
-                    <p class="produit__nom">Teddy_3</p>
-                    <p class="produit__prix">prix</p>
+                    <ul class="produit__description">
+                        <li><h3 class="">Teddy_3</h3></li>
+                        <li><p class="">prix</p></li>
+                    </ul>
                 </a>
             </article>
             <article class="produit">
                 <a>
                     <img class="produit__image produit_image--teddy4" src="" alt="...">
-                    <p class="produit__nom">Teddy_4</p>
-                    <p class="produit__prix">prix</p>
+                    <ul class="produit__description">
+                        <li><h3 class="">Teddy_4</h3></li>
+                        <li><p class="">prix</p></li>
+                    </ul>
                 </a>
             </article>
         </section>
@@ -58,7 +69,12 @@
     </main>
 
     <footer id="footer">
-        
+        <nav class="container navbar navbar-footer">
+            <ul>
+                <li><a href="#">à propos</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
         
         <script type="text/javascript" src="js/index.js"></script>  
     </footer>  

@@ -1,9 +1,19 @@
+/*------------------*\
+        #HEADER
+\*------------------*/
+
 #header {
+    background-color: black;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
-    background-color: $color-primary;
-    color: white;
 }
+
+/*---------------------------*\
+    #LIENS DU HEADER
+\*---------------------------*/
 
 .navbar ul {
     display: flex;

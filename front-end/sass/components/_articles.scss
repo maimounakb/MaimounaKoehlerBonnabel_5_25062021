@@ -1,20 +1,25 @@
 #presentationProduits {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 
 .produit {
+    color: black;
+    background-color: white;
     margin: 0.5rem;
-    height: 10rem;
-    width: 45%;
-    border: black solid 0.1rem;
-    border-radius: 0.2rem;
-
+    width: 48%;
+    border-radius: 0.8rem;
+    overflow: hidden;
     a {
+        height: 20rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+    &__description {
+        padding: 1rem;
+    }
+
 }

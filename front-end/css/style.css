@@ -3,13 +3,17 @@
  * TABLE DES MATIERES
  *
  * BASE
- * Général...............Styles généraux (body, H, a, etc.)
+ * Général.................Styles généraux (body, H, a, containers, etc.)
  *
  * UNTILS
+ * Variables...............Variables de couleurs
  *
  * LAYOUTS
+ * Header..................Style du Header
+ * Footer..................Style du footer
  *
  * COMPONENTS
+ * Articles................Cartes des produits
  *
  * PAGES
  *
@@ -18,19 +22,18 @@
     #VARIABLES COULEURS
     IDENTITE GRAPHIQUE
 \*---------------------------*/
+/*---------------------------*\
+      #STYLES GENERAUX
+       BODY ET TITRES
+\*---------------------------*/
+html {
+  background-color: #F3E9F1;
+  height: 100%;
+}
+
 body {
   margin: 0px;
-}
-
-a {
-  text-decoration: none;
-  margin: 0rem;
-}
-
-ul {
-  margin: 0rem;
-  padding: 0rem;
-  list-style: none;
+  height: 100%;
 }
 
 h1 {
@@ -38,6 +41,35 @@ h1 {
   justify-content: center;
 }
 
+h2 {
+  margin: 1rem;
+}
+
+/*---------------------------*\
+      #STYLES DES LIENS
+\*---------------------------*/
+a {
+  text-decoration: none;
+  margin: 0rem;
+  color: black;
+}
+
+#header a, #footer a {
+  color: white;
+}
+
+/*---------------------------*\
+      #STYLES DES LISTES
+\*---------------------------*/
+ul {
+  margin: 0rem;
+  padding: 0rem;
+  list-style: none;
+}
+
+/*--------------------*\
+      #CONTENEURS
+\*--------------------*/
 .container {
   max-width: 1200px;
   margin-right: auto;
@@ -47,30 +79,43 @@ h1 {
 
 #presentationProduits {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .produit {
+  color: black;
+  background-color: white;
   margin: 0.5rem;
-  height: 10rem;
-  width: 45%;
-  border: black solid 0.1rem;
-  border-radius: 0.2rem;
+  width: 48%;
+  border-radius: 0.8rem;
+  overflow: hidden;
 }
 .produit a {
+  height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-#header {
-  display: flex;
-  justify-content: space-between;
-  background-color: #9356dc;
-  color: white;
+.produit__description {
+  padding: 1rem;
 }
 
+/*------------------*\
+        #HEADER
+\*------------------*/
+#header {
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*---------------------------*\
+    #LIENS DU HEADER
+\*---------------------------*/
 .navbar ul {
   display: flex;
 }
@@ -78,6 +123,17 @@ h1 {
 .navbar li {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+#footer {
+  background-color: black;
+  margin-bottom: 0px;
+  margin-top: auto;
+}
+
+.navbar-footer {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
