@@ -1,10 +1,15 @@
 #footer {
-    background-color: black;
-    margin-bottom: 0px;
+    @include linear-gradient;
     margin-top: auto;
+    margin-bottom: 0px;
 }
 
 .navbar-footer {
     display: flex;
     justify-content: center;
 }
+
+#footer a {
+    color: black;
+    font-weight: bold;
+  }

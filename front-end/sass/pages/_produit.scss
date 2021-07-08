@@ -1,0 +1,56 @@
+.presentation-produit {
+    height: 35rem;
+    background-color: white;
+    margin: 3rem 1rem 3rem 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    
+    h2 {
+        margin: 2rem 0rem 2rem 0rem;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    &__image {
+        width: 50%;
+    }
+    &__texte {
+        width: 50%;
+        padding: 2rem;
+    }
+}
+
+.produit-texte {
+    &__prix {
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
+
+.personnaliser {
+
+    /*&__titre {
+
+    }*/
+
+    &__couleur {
+
+        &--couleur1 {
+            background-color: red;
+            height: 1rem;
+            width : 1rem;
+        }
+        &--couleur2 {
+            background-color: blue;
+            height: 1rem;
+            width : 1rem;
+        }
+        &--couleur3 {
+            background-color: yellow;
+            height: 1rem;
+            width : 1rem;
+        }
+    }
+}

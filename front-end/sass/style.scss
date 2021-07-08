@@ -6,23 +6,30 @@
  *
  * UNTILS
  * Variables...............Variables de couleurs
+ * Mixins..................Mixins diverses
  *
  * LAYOUTS
  * Header..................Style du Header
  * Footer..................Style du footer
  *
  * COMPONENTS
- * Articles................Cartes des produits
+ * Articles................Cartes des produits sur la page index
  *
  * PAGES
+ * Index...................Style de la page index
+ * Produit.................Style de la page produit
  *
  */
 
 
 @import "./untils/variables.scss";
+@import "./untils/mixins.scss";
 
 @import "./base/general.scss";
 @import "./components/articles.scss";
+
+@import "./pages/index.scss";
+@import "./pages/produit.scss";
 
 @import "./layouts/header.scss";
 @import "./layouts/footer.scss";

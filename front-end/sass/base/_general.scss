@@ -3,6 +3,8 @@
        BODY ET TITRES
 \*---------------------------*/
 html {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
   background-color: $color-tertiary;
   height: 100%;
 }
@@ -28,10 +30,7 @@ a {
   text-decoration: none;
   margin: 0rem;
   color: black;
-}
-
-#header a, #footer a {
-  color: white;
+  text-transform: capitalize;
 }
 
 /*---------------------------*\

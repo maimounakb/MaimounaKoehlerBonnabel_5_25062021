@@ -7,15 +7,18 @@
  *
  * UNTILS
  * Variables...............Variables de couleurs
+ * Mixins..................Mixins diverses
  *
  * LAYOUTS
  * Header..................Style du Header
  * Footer..................Style du footer
  *
  * COMPONENTS
- * Articles................Cartes des produits
+ * Articles................Cartes des produits sur la page index
  *
  * PAGES
+ * Index...................Style de la page index
+ * Produit.................Style de la page produit
  *
  */
 /*---------------------------*\
@@ -27,6 +30,8 @@
        BODY ET TITRES
 \*---------------------------*/
 html {
+  font-family: "Open Sans", sans-serif;
+  color: black;
   background-color: #F3E9F1;
   height: 100%;
 }
@@ -52,10 +57,7 @@ a {
   text-decoration: none;
   margin: 0rem;
   color: black;
-}
-
-#header a, #footer a {
-  color: white;
+  text-transform: capitalize;
 }
 
 /*---------------------------*\
@@ -77,14 +79,7 @@ ul {
   padding: 0.5rem;
 }
 
-#presentationProduits {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .produit {
-  color: black;
   background-color: white;
   margin: 0.5rem;
   width: 48%;
@@ -99,6 +94,59 @@ ul {
 }
 .produit__description {
   padding: 1rem;
+}
+
+#presentationProduits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.presentation-produit {
+  height: 35rem;
+  background-color: white;
+  margin: 3rem 1rem 3rem 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+}
+.presentation-produit h2 {
+  margin: 2rem 0rem 2rem 0rem;
+  font-size: xx-large;
+  text-align: center;
+}
+.presentation-produit__image {
+  width: 50%;
+}
+.presentation-produit__texte {
+  width: 50%;
+  padding: 2rem;
+}
+
+.produit-texte__prix {
+  font-size: large;
+  font-weight: bold;
+}
+
+.personnaliser {
+  /*&__titre {
+
+  }*/
+}
+.personnaliser__couleur--couleur1 {
+  background-color: red;
+  height: 1rem;
+  width: 1rem;
+}
+.personnaliser__couleur--couleur2 {
+  background-color: blue;
+  height: 1rem;
+  width: 1rem;
+}
+.personnaliser__couleur--couleur3 {
+  background-color: yellow;
+  height: 1rem;
+  width: 1rem;
 }
 
 /*------------------*\
@@ -116,6 +164,10 @@ ul {
 /*---------------------------*\
     #LIENS DU HEADER
 \*---------------------------*/
+#header a {
+  color: white;
+}
+
 .navbar ul {
   display: flex;
 }
@@ -126,14 +178,19 @@ ul {
 }
 
 #footer {
-  background-color: black;
-  margin-bottom: 0px;
+  background: linear-gradient(to right, #8F5BFE, #E68A08);
   margin-top: auto;
+  margin-bottom: 0px;
 }
 
 .navbar-footer {
   display: flex;
   justify-content: center;
+}
+
+#footer a {
+  color: black;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

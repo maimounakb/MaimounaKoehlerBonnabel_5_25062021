@@ -4,15 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="style.css" href="../css/style.css">
 
-    <title>Onorico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Orinoco</title>
 
 </head>
 
 <body>
- 
-    
-    <script type="text/javascript" src="../js/index.js"></script>    
+    <header id="header">
+        <div class="container header">
+            <img class="logo" src="" alt="logo d'Onorico">
+            <nav class="navbar navbar-header">
+                <ul>
+                    <li class="navbar-header__index"><a href="../index.html">Accueil</a></li>
+                    <li class="navbar-header__panier"><a href="panier.html">Panier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1></h1>
+
+        <article class="presentation-produit">
+            <img class="presentation-produit__image" src="" alt="...">
+            <div class="presentation-produit__texte produit-texte">
+                <h2 class="produit-texte__titre">Nom du produit</h2>
+                <p class="produit-texte__prix">prix</p>
+                <div class="produit-texte__personnaliser personnaliser">
+                    <p class="personnaliser__titre">Couleur :</p>
+                    <div class="personnaliser__couleur"> 
+                        <a href="#" class="personnaliser__couleur--couleur1">...</a>
+                        <a href="#" class="personnaliser__couleur--couleur2">...</a>
+                        <a href="#" class="personnaliser__couleur--couleur3">...</a>
+                    </div>
+                </div>
+                <p class="produit-texte__description">description</p>
+                <button class="produit-texte__bouton">Ajouter au panier</button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer id="footer">
+        <nav class="container navbar navbar-footer">
+            <ul>
+                <li><a href="#">à propos</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+        
+        <script type="text/javascript" src="js/index.js"></script>  
+    </footer>  
 </body>
 </html>

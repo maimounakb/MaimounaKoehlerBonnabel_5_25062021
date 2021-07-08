@@ -1,12 +1,4 @@
-#presentationProduits {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-
 .produit {
-    color: black;
     background-color: white;
     margin: 0.5rem;
     width: 48%;
@@ -21,5 +13,4 @@
     &__description {
         padding: 1rem;
     }
-
 }
