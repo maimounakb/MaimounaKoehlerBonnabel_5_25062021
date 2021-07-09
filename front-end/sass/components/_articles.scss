@@ -1,7 +1,7 @@
 .produit {
     background-color: white;
     margin: 0.5rem;
-    width: 48%;
+    width: 18rem;
     border-radius: 0.8rem;
     overflow: hidden;
     a {
@@ -10,7 +10,21 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    &__image {
+        height: 70%;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &__description {
+        height: 30%;
         padding: 1rem;
+        overflow: hidden;
+
+        p{
+            margin: 0px;
+        }
     }
 }

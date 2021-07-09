@@ -50,6 +50,10 @@ h2 {
   margin: 1rem;
 }
 
+h3 {
+  margin: 0px;
+}
+
 /*---------------------------*\
       #STYLES DES LIENS
 \*---------------------------*/
@@ -82,7 +86,7 @@ ul {
 .produit {
   background-color: white;
   margin: 0.5rem;
-  width: 48%;
+  width: 18rem;
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -92,11 +96,22 @@ ul {
   flex-direction: column;
   justify-content: space-between;
 }
+.produit__image {
+  height: 70%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 .produit__description {
+  height: 30%;
   padding: 1rem;
+  overflow: hidden;
+}
+.produit__description p {
+  margin: 0px;
 }
 
-#presentationProduits {
+#presentation-produits {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
