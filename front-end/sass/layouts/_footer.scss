@@ -5,8 +5,7 @@
 }
 
 .navbar-footer {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 #footer a {

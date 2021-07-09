@@ -1,5 +1,4 @@
 #presentation-produits {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     flex-wrap: wrap;
 }

@@ -18,6 +18,8 @@
  * PAGES
  * Index...................Style de la page index
  * Produit.................Style de la page produit
+ * Panier..................Style de la page panier
+ *
  *
  */
 
@@ -30,6 +32,7 @@
 
 @import "./pages/index.scss";
 @import "./pages/produit.scss";
+@import "./pages/panier.scss";
 
 @import "./layouts/header.scss";
 @import "./layouts/footer.scss";
