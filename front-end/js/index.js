@@ -7,7 +7,7 @@ fetch(url , {method : "GET"})
 
 
     let elementIndex = document.getElementById("presentation-produits")
-    let urlPageProduit = '../pages/produit.html'
+    let urlPageProduit = 'pages/produit.html'
 
     let newHtmlIndex = ""
     products.forEach(product => {
