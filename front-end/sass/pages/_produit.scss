@@ -1,9 +1,6 @@
 .presentation-produit {
     height: 35rem;
-    background-color: white;
-    margin: 3rem 1rem 3rem 1rem;
-    border-radius: 1rem;
-    overflow: hidden;
+    @include style-articles;
     display: flex;
     
     h2 {

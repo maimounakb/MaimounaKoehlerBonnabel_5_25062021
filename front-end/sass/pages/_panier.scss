@@ -3,11 +3,9 @@
 \*---------------------*/
 
 .panier {
-    background-color: white;
-    margin: 3rem 1rem 3rem 1rem;
+    @include style-articles;
     padding: 0rem 2rem 2rem 2rem;
-    border-radius: 1rem;
-    overflow: hidden;
+
 
     &__legende-prix {
         text-align: right;
@@ -19,9 +17,32 @@
         padding: 1rem 0rem;
         border-top: solid $color-primary 0.15rem;
         border-bottom: solid $color-primary 0.15rem;
+
+        &--image {
+            width: 10%;
+            height: auto;
+        }
     }
 
     &__total {
         @include flex-row-space-between;
+    }
+}
+
+.formulaire {
+    @include style-articles;
+    padding: 0rem 2rem 0.5rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    &__identite, &__adresse {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+
+        label {
+            margin: 0.5rem 0rem 0.2rem 0rem;
+        }
     }
 }

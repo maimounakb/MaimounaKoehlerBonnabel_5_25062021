@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 
     <title>Orinoco</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <div class="container header">
-            <img class="logo" src="" alt="logo d'Onorico">
-            <nav class="navbar navbar-header">
-                <ul>
-                    <li class="navbar-header__index"><a href="../index.html">Accueil</a></li>
-                    <li class="navbar-header__panier"><a href="panier.html">Panier</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="container header">
+        <img class="logo" src="" alt="logo d'Onorico" />
+        <nav class="navbar navbar-header">
+          <ul>
+            <li class="navbar-header__index">
+              <a href="../index.html">Accueil</a>
+            </li>
+            <li class="navbar-header__panier">
+              <a href="panier.html">Panier</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main-panier" class="container">
-        <article class="panier">
-            <h1 class="panier__titre">Votre panier</h1>
-            <p class="panier__legende-prix">Prix</p>
-            <div class="panier__produit">
-                <img class="panier__produit--image" src="" alt="...">
-                <h2 class="panier__produit--nom">...</h2>
-                <p class="panier__produit--prix">...</p>
-            </div>
-            <div class="panier__total">
-                <p class="panier__total--texte">Total :</p>
-                <p class="panier__total--prix">...</p>
-            </div>
-        </article>
+
+      <article class="panier">
+        <h1 class="panier__titre">Votre panier</h1>
+        <p class="panier__legende-prix">Prix</p>
+        <div class="panier__produit">
+          <img class="panier__produit--image" src="" alt="..." />
+          <h2 class="panier__produit--nom">...</h2>
+          <p class="panier__produit--prix">...</p>
+        </div>
+        <div class="panier__total">
+          <p class="panier__total--texte">Total :</p>
+          <p class="panier__total--prix">...</p>
+        </div>
+      </article>
+
+      <form method="POST" action="" class="formulaire">
+        <p class="formulaire__identite">
+          <label for="prenom">Prénom</label>
+          <input type="text" name="prenom" id="prenom" />
+
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" />
+
+          <label for="mail">Adresse mail</label>
+          <input type="email" name="mail" id="mail" />
+        </p>
+        <p class="formulaire__adresse">
+          <label for="adresse">Adresse</label>
+          <input type="text" name="adresse" id="adresse" />
+
+          <label for="code-postal">Code Postal</label>
+          <input type="number" name="code-postal" id="code-postal" />
+
+          <label for="ville">Ville</label>
+          <input type="text" name="ville" id="ville" />
+        </p>
+      </form>
+
     </main>
 
     <footer id="footer">
-        <nav class="container navbar navbar-footer">
-            <ul>
-                <li><a href="#">à propos</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </nav>
-        
-        <script type="text/javascript" src="../js/panier.js"></script>  
-    </footer>     
-</body>
+      <nav class="container navbar navbar-footer">
+        <ul>
+          <li><a href="#">à propos</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+
+      <script type="text/javascript" src="../js/panier.js"></script>
+    </footer>
+  </body>
 </html>
