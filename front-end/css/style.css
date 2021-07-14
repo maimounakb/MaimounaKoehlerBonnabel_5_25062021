@@ -7,7 +7,7 @@
  *
  * UNTILS
  * Variables...............Variables de couleurs
- * Mixins..................Mixins diverses
+ * Mixins..................Mixins (dégradé de couleur et flexbox)
  *
  * LAYOUTS
  * Header..................Style du Header
@@ -27,6 +27,13 @@
     #VARIABLES COULEURS
     IDENTITE GRAPHIQUE
 \*---------------------------*/
+/*-------------------*\
+    #MIXIN DEGRADE
+      DE COULEUR
+\*-------------------*/
+/*-------------------*\
+    #MIXIN FLEXBOX
+\*-------------------*/
 /*---------------------------*\
       #STYLES GENERAUX
        BODY ET TITRES
@@ -114,6 +121,10 @@ ul {
   margin: 0px;
 }
 
+/*------------------------*\
+      #AGENCEMENT DES 
+     CARTES "PRODUITS"
+\*------------------------*/
 #presentation-produits {
   display: flex;
   justify-content: center;
@@ -168,6 +179,9 @@ ul {
   width: 1rem;
 }
 
+/*---------------------*\
+    #STYLE DU PANIER
+\*---------------------*/
 .panier {
   background-color: white;
   margin: 3rem 1rem 3rem 1rem;
@@ -221,12 +235,19 @@ ul {
   padding-left: 1rem;
 }
 
+/*------------------------*\
+      #STYLE DU FOOTER
+\*------------------------*/
 #footer {
   background: linear-gradient(to right, #8F5BFE, #E68A08);
   margin-top: auto;
   margin-bottom: 0px;
 }
 
+/*---------------------------*\
+      #STYLE DE BARRE DE
+          NAVIGATION
+\*---------------------------*/
 .navbar-footer {
   display: flex;
   justify-content: center;

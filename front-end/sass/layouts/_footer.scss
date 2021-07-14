@@ -1,8 +1,17 @@
+/*------------------------*\
+      #STYLE DU FOOTER
+\*------------------------*/
+
 #footer {
     @include linear-gradient;
     margin-top: auto;
     margin-bottom: 0px;
 }
+
+/*---------------------------*\
+      #STYLE DE BARRE DE
+          NAVIGATION
+\*---------------------------*/
 
 .navbar-footer {
     @include flex-center;

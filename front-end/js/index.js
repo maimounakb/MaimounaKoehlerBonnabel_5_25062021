@@ -7,13 +7,16 @@ fetch(url , {method : "GET"})
 
 
     let elementIndex = document.getElementById("presentation-produits")
+    let urlPageProduit = '../pages/produit.html'
 
     let newHtmlIndex = ""
     products.forEach(product => {
         /*console.log(product.name)
-        console.log(product.price)*/
+        console.log(product.price)
+        console.log(product._id)*/
+        
         newHtmlIndex += `<article class="produit">
-                        <a href="pages/produit.html">
+                        <a href="${urlPageProduit + "?" + product._id}">
                             <img class="produit__image" src="${product.imageUrl}" alt="${product.name}">
                             <ul class="produit__description">
                                 <li><h3 class="">${product.name}</h3></li>
@@ -26,29 +29,5 @@ fetch(url , {method : "GET"})
     /*console.log(newHtmlIndex)*/
     elementIndex.innerHTML = newHtmlIndex
 
-
-    /*
-    let elementPageProduit = document.getElementById("presentation-produit")
-    let newHtmlPageProduit = ""
-
-    newHtmlPageProduit +=  `<img class="presentation-produit__image" src="${product.imageUrl}" alt="${product.name}">
-                                <div class="presentation-produit__texte produit-texte">
-                                    <h2 class="produit-texte__titre">${product.name}</h2>
-                                    <p class="produit-texte__prix">${product.price}</p>
-                                    <div class="produit-texte__personnaliser personnaliser">
-                                        <p class="personnaliser__titre">Couleur :</p>
-                                        <div class="personnaliser__couleur"> 
-                                            <a href="#" class="personnaliser__couleur--couleur1">...</a>
-                                            <a href="#" class="personnaliser__couleur--couleur2">...</a>
-                                            <a href="#" class="personnaliser__couleur--couleur3">...</a>
-                                        </div>
-                                    </div>
-                                    <p class="produit-texte__description">${product.description}</p>
-                                    <button class="produit-texte__bouton">Ajouter au panier</button>
-                                </div>`
-
-    console.log(newHtmlPageProduit)
-    elementPageProduit.innerHTML = newHtmlPageProduit
-    */
     
 })
