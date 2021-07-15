@@ -16,7 +16,7 @@ fetch(url , {method : "GET"})
         console.log(product._id)*/
         
         newHtmlIndex += `<article class="produit">
-                        <a href="${urlPageProduit + "?" + product._id}">
+                        <a href="${urlPageProduit + "?_id=" + product._id}">
                             <img class="produit__image" src="${product.imageUrl}" alt="${product.name}">
                             <ul class="produit__description">
                                 <li><h3 class="">${product.name}</h3></li>

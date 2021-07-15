@@ -99,8 +99,9 @@ ul {
 
 .produit {
   background-color: white;
-  margin: 0.5rem;
-  width: 18rem;
+  margin: 0.7rem;
+  /*width: 18rem;*/
+  width: 30%;
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -108,16 +109,18 @@ ul {
   height: 20rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 .produit__image {
   height: 70%;
-  width: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
   margin-left: auto;
   margin-right: auto;
 }
 .produit__description {
-  height: 30%;
+  /*height: 30%;*/
   padding: 1rem;
   overflow: hidden;
 }
@@ -130,10 +133,11 @@ ul {
      CARTES "PRODUITS"
 \*------------------------*/
 #presentation-produits {
+  /*@include flex-center;
+  flex-wrap: wrap;*/
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .presentation-produit {

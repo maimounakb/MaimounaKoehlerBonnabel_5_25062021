@@ -1,25 +1,28 @@
 .produit {
     background-color: white;
-    margin: 0.5rem;
-    width: 18rem;
+    margin: 0.7rem;
+    /*width: 18rem;*/
+    width: 30%;
     border-radius: 0.8rem;
     overflow: hidden;
     a {
         height: 20rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        /*justify-content: space-between;*/
     }
 
     &__image {
         height: 70%;
-        width: auto;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
         margin-left: auto;
         margin-right: auto;
     }
 
     &__description {
-        height: 30%;
+        /*height: 30%;*/
         padding: 1rem;
         overflow: hidden;
 

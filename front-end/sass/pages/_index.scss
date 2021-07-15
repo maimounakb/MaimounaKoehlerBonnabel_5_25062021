@@ -4,6 +4,10 @@
 \*------------------------*/
 
 #presentation-produits {
-    @include flex-center;
-    flex-wrap: wrap;
+    /*@include flex-center;
+    flex-wrap: wrap;*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
