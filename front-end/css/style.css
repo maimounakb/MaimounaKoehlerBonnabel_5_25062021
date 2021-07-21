@@ -155,6 +155,8 @@ ul {
 }
 .presentation-produit__image {
   width: 50%;
+  object-fit: cover;
+  object-position: left;
 }
 .presentation-produit__texte {
   width: 50%;
