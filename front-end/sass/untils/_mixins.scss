@@ -31,3 +31,20 @@
     border-radius: 1rem;
     overflow: hidden;
 }
+
+/*------------------*\
+       #MIXIN
+    MEDIA QUERIES
+\*------------------*/
+
+@mixin first-breakpoint {
+    @media screen and (max-width: 595px) {
+      @content;
+    }
+  }
+
+  @mixin second-breakpoint {
+    @media screen and (max-width: 705px) {
+      @content;
+    }
+  }

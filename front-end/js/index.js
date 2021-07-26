@@ -4,14 +4,12 @@ fetch(url, { method: "GET" })
     return data.json();
   })
   .then((products) => {
-    console.log(products);
+    /*console.log(products);*/
 
     let elementIndex = document.getElementById("presentation-produits");
     let urlPageProduit = "pages/produit.html";
 
     let newHtmlIndex = "";
-
-
 
     products.forEach((product) => {
       /*console.log(product.name)

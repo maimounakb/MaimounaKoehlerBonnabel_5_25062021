@@ -38,6 +38,10 @@
     #MIXIN STYLE 
       ARTICLES
 \*------------------*/
+/*------------------*\
+       #MIXIN
+    MEDIA QUERIES
+\*------------------*/
 /*---------------------------*\
       #STYLES GENERAUX
        BODY ET TITRES
@@ -105,6 +109,16 @@ ul {
   border-radius: 0.8rem;
   overflow: hidden;
 }
+@media screen and (max-width: 705px) {
+  .produit {
+    width: 46%;
+  }
+}
+@media screen and (max-width: 595px) {
+  .produit {
+    width: 100%;
+  }
+}
 .produit a {
   height: 20rem;
   display: flex;
@@ -148,19 +162,36 @@ ul {
   overflow: hidden;
   display: flex;
 }
+@media screen and (max-width: 705px) {
+  .presentation-produit {
+    flex-direction: column;
+    height: auto;
+  }
+}
 .presentation-produit h2 {
   margin: 2rem 0rem 2rem 0rem;
   font-size: xx-large;
   text-align: center;
 }
+@media screen and (max-width: 705px) {
+  .presentation-produit h2 {
+    margin-top: 0px;
+  }
+}
 .presentation-produit__image {
-  width: 50%;
   object-fit: cover;
-  object-position: left;
+  /*object-position: left;*/
 }
 .presentation-produit__texte {
-  width: 50%;
   padding: 2rem;
+}
+.presentation-produit__image, .presentation-produit__texte {
+  width: 50%;
+}
+@media screen and (max-width: 705px) {
+  .presentation-produit__image, .presentation-produit__texte {
+    width: auto;
+  }
 }
 
 .produit-texte__prix {
@@ -235,6 +266,11 @@ ul {
   display: flex;
   flex-direction: column;
   width: 45%;
+}
+@media screen and (max-width: 595px) {
+  .formulaire__identite, .formulaire__adresse {
+    width: 100%;
+  }
 }
 .formulaire__identite label, .formulaire__adresse label {
   margin: 0.5rem 0rem 0.2rem 0rem;

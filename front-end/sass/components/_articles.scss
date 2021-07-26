@@ -5,6 +5,15 @@
     width: 30%;
     border-radius: 0.8rem;
     overflow: hidden;
+
+    @include second-breakpoint {
+        width: 46%;
+    }
+
+    @include first-breakpoint {
+        width: 100%;
+    }
+
     a {
         height: 20rem;
         display: flex;

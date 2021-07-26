@@ -41,6 +41,11 @@
         flex-direction: column;
         width: 45%;
 
+        @include first-breakpoint {
+            width: 100%;
+        }
+        
+
         label {
             margin: 0.5rem 0rem 0.2rem 0rem;
         }

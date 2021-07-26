@@ -2,22 +2,41 @@
     height: 35rem;
     @include style-articles;
     display: flex;
+
+    @include second-breakpoint {
+        flex-direction: column;
+        height: auto;
+    }
     
+
     h2 {
         margin: 2rem 0rem 2rem 0rem;
         font-size: xx-large;
         text-align: center;
+
+        @include second-breakpoint {
+            margin-top: 0px;
+        }
+        
     }
 
     &__image {
-        width: 50%;
         object-fit: cover;
-        object-position: left;
+        /*object-position: left;*/
     }
     &__texte {
-        width: 50%;
         padding: 2rem;
     }
+
+    &__image, &__texte {
+        width: 50%;
+
+        @include second-breakpoint {
+            width: auto;
+        }
+        
+    }
+
 }
 
 .produit-texte {
