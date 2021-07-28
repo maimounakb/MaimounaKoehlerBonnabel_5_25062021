@@ -60,7 +60,7 @@ fetch(url, { method: "GET" })
       product.name,
       product.price,
       product.imageUrl,
-      option.value,
+      option.value
     ];
 
     //Création de l'évènement lors du click
