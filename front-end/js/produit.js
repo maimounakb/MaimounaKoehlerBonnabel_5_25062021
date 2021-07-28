@@ -38,71 +38,47 @@ fetch(url, { method: "GET" })
                                                 </div>`;
 
     //Récupération des couleurs pour personnaliser la peluche
-    const choixCouleur = product.colors;
+    const optionCouleur = product.colors;
+
+    //Récupération de l'élément HTML pour ajouter les options
+    let option = document.getElementById("couleur");
 
     //Boucle pour créer les options de couleur
-    choixCouleur.forEach((color) => {
+    optionCouleur.forEach((color) => {
       const nouvelleCouleur = document.createElement("option");
-      let option = document.getElementById("couleur");
       option.appendChild(nouvelleCouleur);
-      nouvelleCouleur.value = couleur;
+      nouvelleCouleur.value = color;
       nouvelleCouleur.textContent = color;
     });
 
     //Récupération de l'élément bouton "ajouter au panier"
     let ajoutPanier = document.getElementById("ajout-panier");
 
-
+    //Création du panier
     let nouveauProduit = [
       product._id,
       product.name,
       product.price,
-      product.imageUrl
-    ]
-      
+      product.imageUrl,
+      option.value,
+    ];
 
     //Création de l'évènement lors du click
     ajoutPanier.addEventListener("click", () => {
-
+      //Récupère le contenu du panier
+      let panier = JSON.parse(localStorage.getItem("panier"));
 
       if (localStorage.getItem("panier") !== null) {
-        alert("Y a un truc dans le panier !");
-
-        donnéesPanier = JSON.parse(localStorage.getItem("panier"));
-        /*console.log(donnéesPanier);*/
-        let panier = [donnéesPanier];
-        console.log(panier);
-
-        let nouveauPanier = panier.push(nouveauProduit);
-        console.log(panier);
-        
-
+        //alert("Y a un truc dans le panier !");
+        panier.push(nouveauProduit);
+        localStorage.setItem("panier", JSON.stringify(panier));
       } else {
-        alert("Le panier est vide !");
-        let premierProduit = localStorage.setItem(
-          "panier",
-          JSON.stringify(nouveauProduit)
-        );
+        //alert("Le panier est vide !");
+        panier = [];
+        panier.push(nouveauProduit);
+        localStorage.setItem("panier", JSON.stringify(panier));
       }
-
-      /*
-      If(il y a déjà des données dans le local storage){
-        Ajouter le nouveau produit au tableau
-      } else {
-        créer un nouveau tableau et ajouter données dedans
-
-        produit.length
-
-      }
-      
-      
-      */
     });
-
-    /*
-    try {
-      localStorage.setItem("key", "value");
-    } catch(e){
 
     /*
     1. Récupérer l'élément
