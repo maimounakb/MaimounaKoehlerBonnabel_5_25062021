@@ -5,41 +5,61 @@ fetch(url, { method: "GET" })
     return data.json();
   })
   .then((product) => {
-    //Conversion du chiffre en euro
-    let price = new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-      minimumFractionDigits: 2,
-    }).format(product.price / 100);
-
     //Récupérer ce qu'il y a dans le panier (local storage)
     let panierPlein = JSON.parse(localStorage.getItem("panier"));
-    console.log(panierPlein);
 
     //Récupération de l'élément "panier" (balise article HTML)
-    let elementsPanier = document.getElementById("produits");
-    console.log(elementsPanier);
+    let elementsPanier = document.getElementById("panier");
+    let elementsPanierProduits = document.getElementById("produits");
 
-    //IF il y a quelque chose dans le paniee
-    panierPlein.forEach((item, index) => {
-        console.log(item, index);
+    /*--------------------------------SI PANIER REMPLI----------------------------------------*/
+
+    //Si il y a quelque chose dans le panier
+    if (localStorage.getItem("panier") !== null) {
+      //Pour chaque produit dans le tableau
+      panierPlein.forEach((item, index) => {
+        //Conversion du chiffre en euro
+        let price = new Intl.NumberFormat("fr-FR", {
+          style: "currency",
+          currency: "EUR",
+          minimumFractionDigits: 2,
+        }).format(item.price / 100);
+
+        //Création d'une nouvelle div avec la classe "panier__produit", enfant de la div avec l'id "produits"
         let nouvelArticle = document.createElement("div");
-        elementsPanier.appendChild(nouvelArticle);
-        nouvelArticle.className =  "panier_produit";
-        nouvelArticle.innerHTML = `<img class="panier__produit--image" src="${item[3]}" alt="${item[1]}" />
-                                    <h2 class="panier__produit--nom">${item[1]}</h2>
-                                    <p class="panier__produit--prix">${item[2]}</p>`
-    });
+        elementsPanierProduits.appendChild(nouvelArticle);
+        nouvelArticle.className = "panier-produit";
+        //Ajout des caractéristiques du produit
+        nouvelArticle.innerHTML = `<img class="panier-produit--image" src="${item.imageUrl}" alt="${item.name}" />
+                                    <h2 class="panier-produit--nom">${item.name}</h2>
+                                    <h3 class="panier-produit--couleur">${item.color}</h3>
+                                    <p class="panier-produit--prix">${price}</p>`;
+      });
 
-    //ELSE il n'y a rien dans le panier
+      /*------------------------------------PRIX TOTAL---------------------------------------------*/
 
+      //Calcul du prix total
+      var valeurInitiale = 0;
+      var total = panierPlein.reduce(
+        (accumulateur, valeurCourante) => accumulateur + valeurCourante.price,
+        valeurInitiale
+      );
+
+      //Conversion du prix total en euros
+      let totalPrice = new Intl.NumberFormat("fr-FR", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+      }).format(total / 100);
+
+      let elementTotalPrice = document.getElementById("panier-total");
+      console.log
+      elementTotalPrice.innerHTML = `<p class="panier-total--texte">Total :</p>
+                                     <p class="panier-total--prix">${totalPrice}</p>`;
+
+      /*---------------------------------SI PANIER VIDE-----------------------------------------------*/
+    } else {
+      //Si le panier est vide, création d'un paragraphe pour alerter
+      elementsPanier.innerHTML = `<p class="panier-produit--vide">Le panier est vide.</p>`;
+    }
   });
-
-  
-
-
-/*
-1. Récupérer ce qu'il y a dans le local storage
-2. Créer nouvel objet "article" pour chaque array dans le local storage
-3. Ajouter les données de chaque article du panier au HTML
-*/

@@ -9,12 +9,14 @@ fetch(url, { method: "GET" })
     return data.json();
   })
   .then((product) => {
-    //Conversion du chiffre en euro
+    //Conversion du prix en euro
     let price = new Intl.NumberFormat("fr-FR", {
       style: "currency",
       currency: "EUR",
       minimumFractionDigits: 2,
     }).format(product.price / 100);
+
+//-----------------INSERTION DU PRODUIT-------------------------------------------
 
     //Récupération de l'élément "produit"
     let elementProduct = document.getElementById("produit");
@@ -37,6 +39,9 @@ fetch(url, { method: "GET" })
                                                     <button class="produit-texte__bouton" id="ajout-panier" type="button">Ajouter au panier</button>
                                                 </div>`;
 
+
+//-------------LES OPTIONS DU PRODUIT-------------------------------------------
+
     //Récupération des couleurs pour personnaliser la peluche
     const optionCouleur = product.colors;
 
@@ -51,43 +56,49 @@ fetch(url, { method: "GET" })
       nouvelleCouleur.textContent = color;
     });
 
+    var texte;
+    texte = document.getElementById("couleur").options[document.getElementById('couleur').selectedIndex].text;
+
+    console.log(texte);
+
+//------------------LE PANIER-----------------------------------------------------
+
     //Récupération de l'élément bouton "ajouter au panier"
     let ajoutPanier = document.getElementById("ajout-panier");
 
     //Création du panier
-    let nouveauProduit = [
-      product._id,
-      product.name,
-      product.price,
-      product.imageUrl,
-      option.value
-    ];
+    let nouveauProduit = {
+      "id" : product._id,
+      "name": product.name,
+      "price": product.price,
+      "imageUrl": product.imageUrl,
+      "color": option.value
+    };
 
-    //Création de l'évènement lors du click
+//--------Création de l'EVENEMENT lors du click--------------------------------
     ajoutPanier.addEventListener("click", () => {
       //Récupère le contenu du panier
       let panier = JSON.parse(localStorage.getItem("panier"));
 
+/*---------S'IL Y A QUELQUE CHOSE DANS LE PANIER--------------------------------
+        1. Ajout du produit dans le tableau
+        2. Envoie dans le local storage*/
+      
       if (localStorage.getItem("panier") !== null) {
-        //alert("Y a un truc dans le panier !");
         panier.push(nouveauProduit);
         localStorage.setItem("panier", JSON.stringify(panier));
+
+/*----------SI LE PANIER EST VIDE-------------------------------------------------
+        1. Création d'un tableau vide
+        2. Ajout du produit dans le tableau
+        3. Envoie dans le local storage*/
+      
       } else {
-        //alert("Le panier est vide !");
         panier = [];
         panier.push(nouveauProduit);
         localStorage.setItem("panier", JSON.stringify(panier));
       }
     });
 
-    /*
-    1. Récupérer l'élément
-    2. Créer un événement
-    3. Stocker les données dans le local storage (JSON) JSON.stringify($DATAS)
   
-      Si il y a déja des données ajouter le nouveuau produit au tableau
-      Si il y a pas de donnée ajouter le produit dans un tableau
-    
-     "récupére le localstorage JSON.parse($DATAS)"
-    */
   });

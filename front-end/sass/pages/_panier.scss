@@ -9,24 +9,31 @@
 
     &__legende-prix {
         text-align: right;
-    }
-
-    &__produit {
-        @include flex-row-space-between;
-        margin-top: 1rem;
-        padding: 1rem 0rem;
-        border-top: solid $color-primary 0.15rem;
+        margin-bottom: 0px;
+        padding-bottom: 1rem;
         border-bottom: solid $color-primary 0.15rem;
+    }
+}
 
-        &--image {
-            width: 10%;
-            height: auto;
-        }
+.panier-produit {
+    @include flex-row-space-between;
+    padding: 1rem 0rem;
+    /*border-top: solid $color-primary 0.15rem;*/
+    border-bottom: solid $color-primary 0.15rem;
+
+    &--image {
+        width: 20%;
+        height: auto;
     }
 
-    &__total {
-        @include flex-row-space-between;
+    &--vide {
+        @include flex-center;
+        padding-top: 1rem;
     }
+}
+
+#panier-total {
+    @include flex-row-space-between;
 }
 
 .formulaire {
