@@ -56,6 +56,9 @@ html {
 body {
   margin: 0px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
@@ -98,6 +101,8 @@ ul {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: auto;
   padding: 0.5rem;
 }
 
@@ -262,6 +267,10 @@ ul {
   justify-content: space-between;
 }
 
+/*-------------------------*\
+    #STYLE DU FORMULAIRE
+        DE COMMANDE
+\*-------------------------*/
 .formulaire {
   background-color: white;
   margin: 3rem 1rem 3rem 1rem;
@@ -319,8 +328,7 @@ ul {
 \*------------------------*/
 #footer {
   background: linear-gradient(to right, #8F5BFE, #E68A08);
-  margin-top: auto;
-  margin-bottom: 0px;
+  width: 100%;
 }
 
 /*---------------------------*\

@@ -3,58 +3,62 @@
 \*---------------------*/
 
 .panier {
-    @include style-articles;
-    padding: 0rem 2rem 2rem 2rem;
+  @include style-articles;
+  padding: 0rem 2rem 2rem 2rem;
 
-
-    &__legende-prix {
-        text-align: right;
-        margin-bottom: 0px;
-        padding-bottom: 1rem;
-        border-bottom: solid $color-primary 0.15rem;
-    }
+  &__legende-prix {
+    text-align: right;
+    margin-bottom: 0px;
+    padding-bottom: 1rem;
+    border-bottom: solid $color-primary 0.15rem;
+  }
 }
 
 .panier-produit {
-    @include flex-row-space-between;
-    padding: 1rem 0rem;
-    /*border-top: solid $color-primary 0.15rem;*/
-    border-bottom: solid $color-primary 0.15rem;
+  @include flex-row-space-between;
+  padding: 1rem 0rem;
+  /*border-top: solid $color-primary 0.15rem;*/
+  border-bottom: solid $color-primary 0.15rem;
 
-    &--image {
-        width: 20%;
-        height: auto;
-    }
+  &--image {
+    width: 20%;
+    height: auto;
+  }
 
-    &--vide {
-        @include flex-center;
-        padding-top: 1rem;
-    }
+  &--vide {
+    @include flex-center;
+    padding-top: 1rem;
+  }
 }
 
 #panier-total {
-    @include flex-row-space-between;
+  @include flex-row-space-between;
 }
 
+/*-------------------------*\
+    #STYLE DU FORMULAIRE
+        DE COMMANDE
+\*-------------------------*/
+
 .formulaire {
-    @include style-articles;
-    padding: 0rem 2rem 0.5rem 2rem;
+  @include style-articles;
+  padding: 0rem 2rem 0.5rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__identite,
+  &__adresse {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-    &__identite, &__adresse {
-        display: flex;
-        flex-direction: column;
-        width: 45%;
+    flex-direction: column;
+    width: 45%;
 
-        @include first-breakpoint {
-            width: 100%;
-        }
-        
-
-        label {
-            margin: 0.5rem 0rem 0.2rem 0rem;
-        }
+    @include first-breakpoint {
+      width: 100%;
     }
+
+    label {
+      margin: 0.5rem 0rem 0.2rem 0rem;
+    }
+  }
 }
