@@ -27,18 +27,17 @@ fetch(url, { method: "GET" })
                                                     <h2 class="produit-texte__titre">${product.name}</h2>
                                                     <p class="produit-texte__prix">${price}</p>
                                                     <div class="produit-texte__personnaliser personnaliser">
-                                                        <form method="post" action="">
+                                                        <form method="" action="">
                                                             <p>
                                                                 <label for="couleur">Choisir la couleur :</label><br />
-                                                                <select name="couleur" id="couleur">
+                                                                <select id="couleur" name="couleur">
                                                                 </select>
+                                                                <input type="button" id="ajout-panier" class="produit-texte__bouton" value="Ajouter au panier"></input>
                                                             </p>
                                                         </form>
                                                     </div>
                                                     <p class="produit-texte__description">${product.description}</p>
-                                                    <button class="produit-texte__bouton" id="ajout-panier" type="button">Ajouter au panier</button>
                                                 </div>`;
-
 
 //-------------LES OPTIONS DU PRODUIT-------------------------------------------
 
@@ -56,49 +55,49 @@ fetch(url, { method: "GET" })
       nouvelleCouleur.textContent = color;
     });
 
-    var texte;
-    texte = document.getElementById("couleur").options[document.getElementById('couleur').selectedIndex].text;
-
-    console.log(texte);
-
-//------------------LE PANIER-----------------------------------------------------
+//-------------Ecoute de l'EVENEMENT lors du click--------------------------------
 
     //Récupération de l'élément bouton "ajouter au panier"
     let ajoutPanier = document.getElementById("ajout-panier");
 
-    //Création du panier
-    let nouveauProduit = {
-      "id" : product._id,
-      "name": product.name,
-      "price": product.price,
-      "imageUrl": product.imageUrl,
-      "color": option.value
-    };
+    //Création de l'évènement
+    ajoutPanier.addEventListener("click", (event) => {
+      event.preventDefault();
 
-//--------Création de l'EVENEMENT lors du click--------------------------------
-    ajoutPanier.addEventListener("click", () => {
+//-------------------CREATION DU PANIER----------------------------------------------
+
+      //Récupère l'option choisie
+      choixCouleur = option.value;
+
+      //Création du panier
+      let nouveauProduit = {
+        id: product._id,
+        name: product.name,
+        price: product.price,
+        imageUrl: product.imageUrl,
+        color: choixCouleur,
+      };
+      console.log(nouveauProduit);
+
       //Récupère le contenu du panier
       let panier = JSON.parse(localStorage.getItem("panier"));
 
 /*---------S'IL Y A QUELQUE CHOSE DANS LE PANIER--------------------------------
         1. Ajout du produit dans le tableau
         2. Envoie dans le local storage*/
-      
+
       if (localStorage.getItem("panier") !== null) {
         panier.push(nouveauProduit);
         localStorage.setItem("panier", JSON.stringify(panier));
 
-/*----------SI LE PANIER EST VIDE-------------------------------------------------
+/*-----------SI LE PANIER EST VIDE-------------------------------------------------
         1. Création d'un tableau vide
         2. Ajout du produit dans le tableau
         3. Envoie dans le local storage*/
-      
       } else {
         panier = [];
         panier.push(nouveauProduit);
         localStorage.setItem("panier", JSON.stringify(panier));
       }
     });
-
-  
   });
