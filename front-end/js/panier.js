@@ -53,7 +53,7 @@ fetch(url, { method: "GET" })
       }).format(total / 100);
 
       let elementTotalPrice = document.getElementById("panier-total");
-      console.log
+      console.log;
       elementTotalPrice.innerHTML = `<p class="panier-total--texte">Total :</p>
                                      <p class="panier-total--prix">${totalPrice}</p>`;
 
@@ -62,4 +62,59 @@ fetch(url, { method: "GET" })
       //Si le panier est vide, création d'un paragraphe pour alerter
       elementsPanier.innerHTML = `<p class="panier-produit--vide">Le panier est vide.</p>`;
     }
+
+    /*---------------------------------FORMULAIRE-----------------------------------------------*/
+
+    let boutonValidationFormulaire = document.getElementById("submit-btn");
+    console.log(boutonValidationFormulaire);
+
+    let email = document.getElementById("mail");
+    console.log(email);
+    let firstName = document.getElementById("prenom");
+    let lastname = document.getElementById("nom");
+    let address = document.getElementById("adresse");
+    let city = document.getElementById("ville");
+
+    boutonValidationFormulaire.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      if (
+        (email.validity.valid === true) &
+        (firstName.validity.valid === true) &
+        (lastname.validity.valid === true) &
+        (address.validity.valid === true) &
+        (city.validity.valid === true)
+      ) {
+        alert("c'est ok");
+      } else {
+        alert("c'est pas ok");
+      }
+
+      /*alert("vous avez cliqué");*/
+    });
+
+    /*
+1. Récupérer les données du formulaire (value)
+2. Vérifier que toutes la cases sont remplies (fait avec HTML5)
+3. Vérifier format adresse mail etc. (adresse mail ok avec HTML5) Mettre nombre caractères max ? (HTML5)
+4.Ajouter un évennement au click
+5. IF les données sont ok, créer un tableau avec les données utilisateur
+   + créer tableau avec données + tableau panier
+   + envoyer via localstorage
+6. ELSE les données sont pas ok, mettre une alerte
+*/
+
+    /**
+     *
+     * Expects request to contain:
+     * contact: {
+     *   firstName: string,
+     *   lastName: string,
+     *   address: string,
+     *   city: string,
+     *   email: string
+     * }
+     * products: [string] <-- array of product _id
+     *
+     */
   });

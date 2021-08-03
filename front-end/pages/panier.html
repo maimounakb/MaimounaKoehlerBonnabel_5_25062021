@@ -49,23 +49,26 @@
       <form method="POST" action="" class="formulaire">
         <p class="formulaire__identite">
           <label for="prenom">Prénom</label>
-          <input type="text" name="prenom" id="prenom" />
+          <input type="text" name="prenom" id="prenom" required maxlength="40" />
 
           <label for="nom">Nom</label>
-          <input type="text" name="nom" id="nom" />
+          <input type="text" name="nom" id="nom" required required maxlength="50" />
 
           <label for="mail">Adresse mail</label>
-          <input type="email" name="mail" id="mail" />
+          <input type="email" name="mail" id="mail" required />
         </p>
         <p class="formulaire__adresse">
           <label for="adresse">Adresse</label>
-          <input type="text" name="adresse" id="adresse" />
+          <input type="text" name="adresse" id="adresse" required />
 
           <label for="code-postal">Code Postal</label>
-          <input type="number" name="code-postal" id="code-postal" />
+          <input type="number" name="code-postal" id="code-postal" required />
 
           <label for="ville">Ville</label>
-          <input type="text" name="ville" id="ville" />
+          <input type="text" name="ville" id="ville" required maxlength="40" />
+        </p>
+        <p>
+          <input type="submit" value="Valider" id="submit-btn" />
         </p>
       </form>
 

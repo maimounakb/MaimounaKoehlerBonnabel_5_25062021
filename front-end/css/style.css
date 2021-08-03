@@ -295,6 +295,14 @@ ul {
   margin: 0.5rem 0rem 0.2rem 0rem;
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
+input:valid {
+  border: 1px solid black;
+}
+
 /*------------------*\
         #HEADER
 \*------------------*/
